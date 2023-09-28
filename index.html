@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Capgemini</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<style>
+
+    /* Apply bold Ubuntu font to navbar elements */
+    .navbar {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+
+        .navbar-brand {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold; /* Make the font bold */
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+
+        .navbar-nav .nav-link {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold; /* Make the font bold */
+            font-size: 13.8px; /* Adjust the font size as needed */
+        }
+	
+    .navbar-nav.navbar-center {
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+    }
+
+    .navbar-nav .nav-item {
+    position: relative;
+    transition: color 0.5s;
+    }
+
+    .navbar-nav .nav-item::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0070ad; /* Change to your desired line color */
+    transition: width 0.3s;
+    }
+
+    .navbar-nav .nav-item:hover {
+    color: #0070ad; /* Change to your desired color */
+    }
+
+    .navbar-nav .nav-item:hover::before {
+    width: 100%;
+    }
+
+    
+    .navbar-nav .nav-link.home:hover {
+      color: #0070ad; /* Change to your desired color for the Home button on hover */
+    }
+
+    .navbar-nav .nav-link.about:hover {
+      color: #0070ad; /* Change to your desired color for the About button on hover */
+    }
+
+    .navbar-nav .nav-link.services:hover {
+      color: #0070ad; /* Change to your desired color for the Services button on hover */
+    }
+
+    .navbar-nav .nav-link.contact:hover {
+      color: #0070ad; /* Change to your desired color for the Contact button on hover */
+    }
+    
+    .image-with-shadow {
+    /* Apply a shadow to the image */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Adjust shadow properties as needed */
+}
+
+.button {
+  background-color: #ffffff;
+  border-color: black;
+  border-width: 1px; /* Set the border width to make it thin */
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 65px;
+  cursor: pointer;
+  border-radius: 25px;
+  position: absolute; /* Set the position to absolute */
+  top: 520px; /* Adjust the top position as needed */
+  left: 2px; /* Adjust the left position as needed */
+}
+
+.button:hover {
+    background-color: #00E6E3; /* Change the background color on hover */
+    color: #000000; /* Change the text color on hover */
+}
+
+
+.custom-text {
+
+    position: absolute; /* Set the position to absolute */
+    top: 140px; /* Adjust the top position as needed */
+    left: 100px; /* Adjust the left position as needed */
+    color: #ffffff; /* Change the text color to white */
+    font-family: 'Ubuntu', sans-serif;
+   
+    font-size: 20px; /* Adjust the font size as needed */
+}
+
+.custom-text-1 {
+
+position: absolute; /* Set the position to absolute */
+top: 200px; /* Adjust the top position as needed */
+left: 100px; /* Adjust the left position as needed */
+color: #ffffff; /* Change the text color to white */
+font-family: 'Ubuntu', sans-serif;
+font-weight: bold; /* Make the font bold */
+font-size: 30px; /* Adjust the font size as needed */
+}
+
+.custom-text-2 {
+
+position: absolute; /* Set the position to absolute */
+top: 425px; /* Adjust the top position as needed */
+left: 100px; /* Adjust the left position as needed */
+color: #ffffff; /* Change the text color to white */
+font-family: 'Ubuntu', sans-serif;
+font-size: 20px; /* Adjust the font size as needed */
+}
+
+.custom-text-3 {
+
+position: absolute; /* Set the position to absolute */
+top: 175px; /* Adjust the top position as needed */
+left: 480px; /* Adjust the left position as needed */
+color: #000000; /* Change the text color to white */
+font-family: 'Ubuntu', sans-serif;
+font-size: 20px; /* Adjust the font size as needed */
+}
+
+.custom-text-4 {
+
+position: absolute; /* Set the position to absolute */
+top: 220px; /* Adjust the top position as needed */
+left: 480px; /* Adjust the left position as needed */
+color: #000000; /* Change the text color to white */
+font-family: 'Ubuntu', sans-serif;
+font-weight: bold; /* Make the font bold */
+font-size: 21px; /* Adjust the font size as needed */
+}
+
+.custom-text-5 {
+
+position: absolute; /* Set the position to absolute */
+top: 260px; /* Adjust the top position as needed */
+left: 480px; /* Adjust the left position as needed */
+color: #000000; /* Change the text color to white */
+font-family: 'Ubuntu', sans-serif;
+font-size: 14px; /* Adjust the font size as needed */
+}
+
+
+
+	</style>
+</head>
+
+<body>
+	<!--NAVBAR STARTING-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light-tertiary">
+		<div class="container">
+			<a class="navbar-brand text-success" href="#">
+                <img src="./img/cg_logo.png" width="160" height="40">
+            </a>
+			<button class="navbar-toggler" type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse"
+				id="navbarSupportedContent">
+				<ul class=" nav navbar-nav navbar-center">
+					<li class="nav-item active">
+						<a class="nav-link home"
+						href="portal1.html">
+						Portal del Empleado
+						<span class="sr-only">
+							(current)
+						</span>
+					</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link about"
+						href="portal2.html">
+						Grupo Capgemini 
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link services"
+						href="#">
+						Capgemini España
+						</a>
+					</li>
+          <li class="nav-item">
+						<a class="nav-link contact"
+						href="#">
+						Intranet
+						</a>
+					</li>
+          <li class="nav-item">
+						<a class="nav-link contact"
+						href="#">
+						MyLearning 
+						</a>
+					</li>
+          <li class="nav-item">
+						<a class="nav-link contact"
+						href="#">
+						MyConnect
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+        <!--cg bg-->
+        
+        <img src="./img/OFFw cg.jpg" class="img-fluid">
+
+
+        <!--CG BG Image with inline styles for size and position -->
+        <img src="./img/bg_cg.png" alt="Your Image" style="width: 55%; margin-top: -1000px; /* Adjust the margin-top as needed */ 
+        margin-left: 44%; /* Center horizontally */ 
+        margin-right: 0%; /* Center horizontally */">
+
+
+        <!--BLUE BG Image with inline styles for size and position -->
+        <img src="./img/Frame 2.jpg" alt="Your Image" style="width: 28%; margin-top: -1050px; /* Adjust the margin-top as needed */ 
+        margin-left: 5%; /* Center horizontally */ 
+        margin-right: 0%; /* Center horizontally */">
+
+
+          <!--WT BG Image with inline styles for size and position -->
+        
+        <img src="./img/Wt.jpg" class="image-with-shadow" alt="Your Image" style="width: 28%; margin-top: -1050px; /* Adjust the margin-top as needed */ 
+        margin-left: 3%; /* Center horizontally */ 
+        margin-right: 30%; /* Center horizontally */">
+
+
+        <div class="custom-text">
+          <a>- Trabajo distancia</a>
+        </div>
+
+        <div class="custom-text-1">
+          <a>Teletrabajo</a>
+        </div>
+
+        <div class="custom-text-2">
+          <a>- With supporting text below</a>
+        </div>
+
+        <div class="custom-text-3">
+          <a>- Capgemini application</a>
+        </div>
+        
+        <div class="custom-text-4">
+          <a>Information about Application</a>
+        </div>
+
+        <div class="custom-text-5">
+          <p> Lorem Ipsum is simply dummy text of the printing<br>and typesetting industry. Lorem Ipsum has been<br> the industry's standard dummy text ever since the<br> 1500s, when an unknown printer took a galley of<br> type and scrambled it to make a type specimen<br> book.</p>
+        </div>
+
+        <div>
+      <button class="button">More insights</button>
+        </div>
+
+   <!-- Link to Bootstrap JS and jQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
