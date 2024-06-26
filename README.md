@@ -16,7 +16,7 @@ The THoR web application is a holiday reporting tool designed to streamline the 
 
 <img width="946" alt="image" src="https://github.com/123Akshat/CG-2-Home-Page/assets/103346687/9d8278c1-d701-4650-b559-5fc39b77fa3f">
 
-
+https://team-holiday-report-thor.netlify.app/portal1
 
 ### Key Features
 - **Responsive UI Design:** Leveraged the Bootstrap framework to create a user-friendly and responsive interface.
